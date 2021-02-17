@@ -143,9 +143,11 @@
     </div>
     <script>
         var forPassElem = document.getElementById('forgotPassword');
-        forPassElem.setAttribute('href', 'https://ehmpb2cdev.b2clogin.com/ehmpb2cdev.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_PasswordReset&client_id=5dc671b0-988f-4abd-a1eb-b2bdcd59042c&nonce=defaultNonce&redirect_uri=http%3A%2F%2Flocalhost%3A4200&scope=openid&response_type=id_token&prompt=login');
-        forPassElem.removeAttribute('id');
-        console.log(forPassElem)
+        forPassElem.style.display = 'none';
+        var el = document.createElement("a");
+        el.innerHTML = "Forgot your password?";
+        el.setAttribute('href', 'https://ehmpb2cdev.b2clogin.com/ehmpb2cdev.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_PasswordReset&client_id=5dc671b0-988f-4abd-a1eb-b2bdcd59042c&nonce=defaultNonce&redirect_uri=http%3A%2F%2Flocalhost%3A4200&scope=openid&response_type=id_token&prompt=login');
+        forPassElem.parentNode.insertBefore(el, forPassElem.nextSibling);
     </script>
 </body>
 </html>
