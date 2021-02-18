@@ -147,6 +147,10 @@
         var trueOption = document.getElementById('true_option');
         trueOption.removeAttribute('for');
         trueOption.innerHTML = 'I agree to the <a href="https://www.empirxhealth.com/" target="_blank"> terms and conditions </a>';
+        var btn = document.getElementById('cancel');
+        btn.removeAttribute('id');
+        btn.setAttribute('style', 'padding: 0;    margin-left: auto;    background: 0 0;    border: 0;    width: inherit;    position: absolute;    background-color: transparent;    top: 2px;    left: 15px;    font-size: 1em;    color: #505050;    box-shadow: none;    text-align: left;');
+        btn.setAttribute('onclick', 'window.location.href="https://google.com"')
     </script>
 </body>
 </html>
