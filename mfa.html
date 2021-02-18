@@ -141,6 +141,12 @@
             </div>
         </div>
     </div>
+    <script>
+        var btn = document.getElementById('cancel');
+        btn.removeAttribute('id');
+        btn.setAttribute('style', 'padding: 0;    margin-left: auto;    background: 0 0;    border: 0;    width: inherit;    position: absolute;    background-color: transparent;    top: 2px;    left: 15px;    font-size: 1em;    color: #505050;    box-shadow: none;    text-align: left;');
+        btn.setAttribute('onclick', 'window.location.href="https://ehmpb2cdev.b2clogin.com/ehmpb2cdev.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_SignUpSignIn&client_id=5dc671b0-988f-4abd-a1eb-b2bdcd59042c&nonce=defaultNonce&redirect_uri=http://localhost:4200&scope=openid&response_type=id_token&prompt=login"')
+    </script>
 </body>
 </html>
 
