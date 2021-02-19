@@ -151,7 +151,7 @@
          var contact = document.getElementById('extension_FirstName');
         var error = document.createElement('div');
         error.innerHTML = 'this is error';
-        if(contact.value === 'test'){
+        if(contact.value.length === 3){
             contact.appendChild(error);
         }
        
