@@ -147,6 +147,14 @@
         var trueOption = document.getElementById('true_option');
         trueOption.removeAttribute('for');
         trueOption.innerHTML = 'I agree to the <a href="https://www.empirxhealth.com/" target="_blank"> terms and conditions </a>';
+        
+         var contact = document.getElementById('extension_FirstName');
+        var error = document.createElement('div');
+        error.innerHTML = 'this is error';
+        if(contact.value === 'test'){
+            contact.appendChild(error);
+        }
+       
         /*
         var btn = document.getElementById('cancel');
         btn.removeAttribute('id');
