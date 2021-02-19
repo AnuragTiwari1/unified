@@ -148,7 +148,16 @@
         trueOption.removeAttribute('for');
         trueOption.innerHTML = 'I agree to the <a href="https://www.empirxhealth.com/" target="_blank"> terms and conditions </a>';
         
-         
+        var htmlElements = document.getElementsByClassName('attrEntry');
+        var contactNumber = document.getElementById('extension_ContactNumber');
+        contactNumber.addEventListener('blur', () =>{ lengthValidation(contactNumber, 10, 10, htmlElements[8].children[1])});
+           
+         function lengthValidation(field_name, minLength, maxLength, element){
+                if(field_name.value.length < minLength || field_name.value.length > maxLength){
+                       element.setAttribute('class', 'error itemLevel show'); 
+                       element.innerText = 'Please enter valid value';
+                }
+         }
        
         /*
         var btn = document.getElementById('cancel');
